@@ -8,8 +8,6 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build-netlify": "npm install --legacy-peer-deps && npx expo export:web"
-}
-
   },
   "dependencies": {
     "@expo-google-fonts/rubik": "^0.2.3",
