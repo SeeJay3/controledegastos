@@ -1,0 +1,11 @@
+[build]
+  command = "npx expo export:web"
+  publish = "web-build"
+
+[dev]
+  command = "expo start --web"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
