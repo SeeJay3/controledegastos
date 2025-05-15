@@ -1,21 +1,27 @@
 import { View, Text, TouchableOpacity } from 'react-native'
-
 import { styles } from './styles';
-
 import { SpendingStorageDTO } from "../../storage/spending/SpendingStorageDTO";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 type Props = {
   data: SpendingStorageDTO
-  onRemove?: void
+  onRemove?: () => void
+  onEdit?: () => void
 }
 
-export function TransactionExpenses({ data, onRemove }: Props) {
+export function TransactionExpenses({ data, onRemove, onEdit }: Props) {
   return (
     <View style={styles.container}>
-      <View style={styles.clear}>
+      <View style={styles.actions}>
       <Text style={styles.description}>{data.name}</Text>
-      <TouchableOpacity onPress = {}>
+      <TouchableOpacity onPress = {onEdit}>
+      <FontAwesome 
+        name="pencil" 
+        size={24} 
+        color="black" />
+      </TouchableOpacity>
+      <TouchableOpacity onPress = {onRemove}>
         <FontAwesome 
           name="trash-o" 
           size={24} 

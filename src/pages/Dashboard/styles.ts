@@ -4,18 +4,17 @@ import { colors } from "../../styles/color";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: "100%",
-    padding: 20,
+    width: '100%',
+    padding: 16,
     backgroundColor: colors.gray[100],
   },
   
   title: {
     color: colors.gray[500],
-    fontWeight: "bold",
-    fontSize: 28,
-    textAlign: "center",
-    marginVertical: 32,
-    letterSpacing: 0.25,
+    fontWeight: 'bold',
+    fontSize: 26,
+    textAlign: 'center',
+    marginTop: 24,
   },
   
   buttonText: {

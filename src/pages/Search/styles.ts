@@ -29,7 +29,6 @@ export const styles = StyleSheet.create({
 
   inputContainer: {
     width: '100%',
-    marginTop: 16,
     flexDirection: 'row', 
     alignItems: 'center'
   },

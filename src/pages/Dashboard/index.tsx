@@ -46,7 +46,7 @@ export function Dashboard() {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
        <View style={styles.header}>
           <Text style={styles.title}>Controle de Gastos</Text>
        </View>
@@ -93,7 +93,7 @@ export function Dashboard() {
             Adicionar
         </Text>
       </TouchableOpacity> 
-    </View>
+    </ScrollView>
   );
 }
 

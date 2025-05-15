@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
   },
-  clear: {
+  actions: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

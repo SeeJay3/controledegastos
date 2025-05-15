@@ -4,10 +4,9 @@ import { colors } from "../../styles/color";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: "100%",
-    backgroundColor: colors.gray[100], 
-    paddingHorizontal: 20,
-    paddingTop: 32,
+    width: '100%',
+    padding: 16,
+    backgroundColor: colors.gray[100],
   },
   
   header: {
@@ -26,15 +25,11 @@ export const styles = StyleSheet.create({
   },
   
   title: {
-    color: colors.gray[500], 
-    fontWeight: "bold",
-    fontSize: 28, 
-    textAlign: "center",
-    marginVertical: 8,
-    letterSpacing: 0.3, 
-  },
-  button: {
-
+    color: colors.gray[500],
+    fontWeight: 'bold',
+    fontSize: 26,
+    textAlign: 'center',
+    marginTop: 24,
   },
 }
 )

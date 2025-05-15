@@ -28,7 +28,6 @@ export function Search() {
         <View style={styles.header}>
           <Text style={styles.title}>Pesquisa de Gastos</Text>
         </View>
-
           <View style={styles.inputContainer}>
             <TextInput
               style={[styles.input, { flex: 1, marginRight: 10, marginBottom: 0 }]}
