@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../styles/color";
+import { fontFamily } from "../../styles/font-family";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-    padding: 16,
+    padding: 20,
     backgroundColor: colors.gray[100],
   },
 
@@ -13,62 +14,57 @@ export const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 24,
+    marginBottom: 32,
     paddingBottom: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.gray[500], 
+    borderBottomWidth: 2,
+    borderBottomColor: colors.gray[200],
   },
 
   title: {
     color: colors.gray[500],
-    fontWeight: 'bold',
-    fontSize: 26,
+    fontFamily: fontFamily.bold,
+    fontSize: 28,
     textAlign: 'center',
     marginTop: 24,
   },
 
   inputContainer: {
     width: '100%',
-    flexDirection: 'row', 
-    alignItems: 'center'
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
   },
 
   input: {
-    width: '100%',
-    backgroundColor: colors.gray[200],
-    paddingVertical: 12,
-    paddingHorizontal: 14,
+    flex: 1,
+    backgroundColor: colors.gray[100],
+    paddingVertical: 14,
+    paddingHorizontal: 16,
     fontSize: 16,
-    borderRadius: 6,
-    marginBottom: 16,
-    borderWidth: 1,
+    fontFamily: fontFamily.regular,
+    borderRadius: 12,
+    borderWidth: 1.5,
     borderColor: colors.gray[300],
-  },
-
-  buttonContainer: {
-    width: '100%',
-    marginTop: 8,
+    color: colors.gray[500],
   },
 
   button: {
-    width: 'auto',
-    paddingVertical: 12,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
     backgroundColor: colors.green.base,
-    borderRadius: 6,
+    borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 20,
-    marginTop: 0
+    shadowColor: colors.green.dark,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3,
   },
 
-  buttonText: {
-    color: colors.green.soft,
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
   transactions: {
     flex: 1,
-    paddingBottom: 24, 
-    paddingTop: 14,
+    paddingBottom: 24,
+    paddingTop: 20,
   },
 });
