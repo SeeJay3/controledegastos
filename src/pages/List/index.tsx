@@ -29,21 +29,21 @@ export function List() {
   }
 
   async function handleEditSpending(itemEdited: SpendingStorageDTO) {
-  Alert.alert(
-    'Editar gasto',
-    'Deseja salvar as alterações deste gasto?',
-    [
-      { text: 'Cancelar' },
-      { 
-        text: 'Salvar', 
-        onPress: async () => { 
-          await spendingEdit(itemEdited); 
-          loadDataSpending(); 
-        } 
-      }
-    ]
-  );
-}
+    Alert.alert(
+      'Editar gasto',
+      'Deseja salvar as alterações deste gasto?',
+      [
+        { text: 'Cancelar' },
+        { 
+          text: 'Salvar', 
+          onPress: async () => { 
+            await spendingEdit(itemEdited); 
+            loadDataSpending(); 
+          } 
+        }
+      ]
+    );
+  }
 
   useFocusEffect(useCallback(() => {
     loadDataSpending()
@@ -58,7 +58,11 @@ export function List() {
         <FlatList
           data={dataExpenses}
           renderItem={({ item }) => (
-          <TransactionExpenses data={item} onRemove = {()=>handleDeleteSpending(item)}/>
+            <TransactionExpenses
+              data={item}
+              onEdit={() => handleEditSpending(item)}
+              onRemove={() => handleDeleteSpending(item)}
+            />
           )}
           showsVerticalScrollIndicator={false}
           />
